@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Checkout — Tarot</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Complete Your Booking</h1>
+
+    <p id="selected"></p>
+
+    <form id="bookingForm">
+      <label>Your Name</label>
+      <input type="text" name="name" required />
+
+      <label>Date of Birth</label>
+      <input type="date" name="birthdate" required />
+
+      <label>Weekday of Birth (optional)</label>
+      <input type="text" name="weekday" />
+
+      <label>Your Question</label>
+      <textarea name="question" required></textarea>
+
+      <hr>
+
+      <h2>📌 Pay With KBZPay</h2>
+      <p><b>Amount:</b> <span id="amount"></span> Ks</p>
+
+      <!-- Static QR (your uploaded QR image) -->
+      <img src="tarot-reading/z7240945793063_dcb84910372cfe26f012eb81a84170d9.jpg"
+           alt="KPay QR" class="qr">
+
+      <p style="margin-top:5px;color:#ffd;">This QR is valid for 10 minutes.</p>
+
+      <h3 id="timer" style="color:#ff8080;font-size:20px;"></h3>
+
+      <label>After payment, enter your Transaction ID OR Phone No</label>
+      <input type="text" name="payment" required placeholder="Example: 09xxxxxx or TRX12345"/>
+
+      <button type="submit" class="btn">I Paid — Confirm Booking</button>
+    </form>
+
+    <div id="status" style="margin-top:10px;color:lightgreen;"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
